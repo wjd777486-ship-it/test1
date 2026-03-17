@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #faf8f5;
+  --bg-card: #ffffff;
+  --accent-pink: #f4a7b9;
+  --accent-lavender: #c4b5d4;
+  --accent-mint: #a8d8c8;
+  --text-primary: #3d3538;
+  --text-secondary: #8b7d82;
+  --text-muted: #b8adb2;
+  --border: #ecdfe4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(244, 167, 185, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(196, 181, 212, 0.08) 0%, transparent 50%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-pink);
+  border-radius: 2px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+/* Card base */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 181, 212, 0.2);
+}
+
+/* Prose styles for MDX */
+.prose-custom {
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+.prose-custom h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; margin-top: 2rem; }
+.prose-custom h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; margin-top: 1.75rem; }
+.prose-custom h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; margin-top: 1.5rem; }
+.prose-custom p { margin-bottom: 1rem; }
+.prose-custom ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose-custom ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
+.prose-custom li { margin-bottom: 0.25rem; }
+.prose-custom a { color: var(--accent-lavender); text-decoration: underline; }
+.prose-custom strong { font-weight: 600; }
+.prose-custom em { font-style: italic; color: var(--text-secondary); }
+.prose-custom blockquote {
+  border-left: 3px solid var(--accent-pink);
+  padding-left: 1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+.prose-custom code {
+  background: #f5f0f3;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+.prose-custom pre {
+  background: #2d2427;
+  color: #f8f0f4;
+  padding: 1.25rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.prose-custom pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: 0.875rem;
+}
+.prose-custom hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
