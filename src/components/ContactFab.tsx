@@ -59,7 +59,7 @@ export default function ContactFab() {
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <p style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--text-primary)" }}>
-                ☕ 메시지 보내기
+                ✉️ 메시지 보내기
               </p>
               <button
                 onClick={() => setIsOpen(false)}
@@ -162,7 +162,7 @@ export default function ContactFab() {
             transition: "all 0.2s ease",
           }}
         >
-          ☕
+          ✉️
         </button>
       </div>
     </>
