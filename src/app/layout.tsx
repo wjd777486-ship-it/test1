@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
-import BgmPlayer from "@/components/BgmPlayer";
+import ContactFab from "@/components/ContactFab";
 
 export const metadata: Metadata = {
   title: "나의 미니홈피",
@@ -20,7 +20,7 @@ export default function RootLayout({
         <main className="max-w-2xl mx-auto px-4 py-8">
           {children}
         </main>
-        <BgmPlayer />
+        <ContactFab />
       </body>
     </html>
   );
